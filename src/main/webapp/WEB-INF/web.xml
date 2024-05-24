@@ -4,14 +4,17 @@
 	<display-name>Archetype Created Web Application</display-name>
 
 	<!--
-	Step 1
-	Config Dispatcher Servlet
+	Step 1 Config Dispatcher Servlet
 	 -->
 	<servlet>
 		<servlet-name>spring</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 		
 	</servlet>
 
+<!-- 
+1a Servlet Mapping name same as servlet name
+1b url pattern DispatcherSevlet Mappping
+-->
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/</url-pattern>

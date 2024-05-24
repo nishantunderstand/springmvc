@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>This is About Page</title>
 </head>
 <body>
 	<h1>WEB-INF/views/about.jsp</h1>
+	<h1> After Hitting the About Page</h1>
 </body>
 </html>
