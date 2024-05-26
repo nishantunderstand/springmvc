@@ -11,12 +11,19 @@
 </head>
 <body>
 	<%
+	String name = (String) request.getAttribute("name");
 	List<String> friends1 = (List<String>) request.getAttribute("friendlist");
 	%>	
+	
+	<h1> name <%=name %></h1>
+	<h1>
 	<%  
 	for(String s:friends1)
 		out.println(s);
 	%>
+	
+	</h1>
+	
 </body>
 </html>
 

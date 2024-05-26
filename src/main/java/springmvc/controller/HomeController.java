@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -27,13 +28,17 @@ import org.springframework.web.servlet.ModelAndView;
 	
  */
 @Controller
+@RequestMapping("/first") 
+// You can apply on method as well as class
+// Now Below URL becomes Relative to this class Request Mapping.
 public class HomeController {
 
-	@RequestMapping("/home")
+	// @RequestMapping("/home")
+	@RequestMapping(path = "/home",method = RequestMethod.GET)
 	public String index(Model model) {
 		
 		// How to Add Primitive Data Type Or String 
-		model.addAttribute("name", "Ashish");
+		model.addAttribute("name", "Ashish GET METHOD BY REQUEST METHOD!!!");
 		
 		// How to Add ArrayList to model
 		List<String> friends = new ArrayList<String>();
@@ -76,7 +81,7 @@ public class HomeController {
 		ModelAndView modelAndView = new ModelAndView();
 
 		// Adding Value to Model & View
-		modelAndView.addObject("name","Aakash!!!!!!");
+		modelAndView.addObject("name","Aakash1111");
 		modelAndView.addObject("rollnumber", 512112);
 		
 		LocalDateTime nowDateTime= LocalDateTime.now();
@@ -99,3 +104,9 @@ public class HomeController {
 	}
 }
 
+
+
+/**
+ * How this works: localhost:8081/projectname/urlpattern
+ * localhost:8081/springmvc/home --> Then it will Open homeController
+ */
