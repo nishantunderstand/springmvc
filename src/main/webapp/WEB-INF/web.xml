@@ -1,3 +1,7 @@
+<!-- 
+	JSP 2.0 This is updated Vesion of 
+-->
+
 <web-app 
 	xmlns="http://java.sun.com/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,22 +10,20 @@
          version="3.0">
 	<servlet>
 		<servlet-name>spring</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 		
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 						
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
+		<servlet-name>aman</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 </web-app>
 
 
-<!-- 
-JSP 2.0 This is updated Vesion of 
--->
 
 
-<!-- Old Version of JSP 2.0
+
+<!-- Old Version of JSP 1.2
 
 <web-app id="WebApp_ID" version="2.4" 
 	xmlns="http://java.sun.com/xml/ns/j2ee" 
@@ -29,6 +31,8 @@ JSP 2.0 This is updated Vesion of
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 -->
+
+
 
 
 <!-- 
