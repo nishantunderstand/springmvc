@@ -14,34 +14,45 @@ Jun 4, 2025,10:03:26 PM
 Controller to UI | Backend to Frontned 
 Spring 2.5 x Approach
 	Model
-		ScripletTag
-		Expression Language
-		JSTL
-		Thymleaf
-	ModelAndView
+		ScripletTag : Spring 1x
+		Expression Language : : Spring 2x
+		JSTL : : Spring 2x
+ 		Thymleaf : : Spring 3.1
+	ModelAndView : Spring 2.5x
  */
+
 @Controller
-public class ContactController {	
-	
-	
-	@RequestMapping("/home")
-	public String home(Model model) {
+public class Backend2Frontend_Model {	
+	@RequestMapping("/modeljsp1")
+	public String modeljsp1(Model model) {
+		System.out.println(" === Model JSP 1x ====");
 		model.addAttribute("name", "Ashish");
 		model.addAttribute("id", 444);
-
-		List<String> friends = new ArrayList<String>();
-		
+		List<String> friends = new ArrayList<String>();		
 		friends.add("Aman");
 		friends.add("Ashish");
 		friends.add("Ashish Ranjan");
 		friends.add("Aakash Sinha");
-		friends.add("Nishant");
-
+		friends.add("Nishant");		
 		model.addAttribute("friendlist", friends);
-
-		//return "jsp1x"; 		
-		return "jsp2x";
+		return "model-jsp1x"; 		
 	}	
+	
+	
+	@RequestMapping("/modeljsp2")
+	public String modeljsp2(Model model) {
+		System.out.println(" === Model JSP 2x====");
+		model.addAttribute("name", "Ashish");
+		model.addAttribute("id", 444);
+		List<String> friends = new ArrayList<String>();		
+		friends.add("Aman");
+		friends.add("Ashish");
+		friends.add("Ashish Ranjan");
+		friends.add("Aakash Sinha");
+		friends.add("Nishant");		
+		model.addAttribute("friendlist", friends); 		
+		return "model-jsp2x";
+	}
 	
 	
 	
