@@ -9,3 +9,9 @@ org.apache.maven:maven-repository-metadata:pom:3.0 failed to transfer from https
 https://dzone.com/articles/how-resolve-mavens-failure
 
 for /r %i in (*.lastUpdated) do del %i
+
+
+# ModelAndView’s model value is not displayed in JSP via EL
+https://mkyong.com/spring-mvc/modelandviews-model-value-is-not-displayed-in-jsp-via-el/
+
+How to know which JSP Version, I am using 
