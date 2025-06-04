@@ -10,15 +10,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController1 {
+public class HomeController {
 
+	// Maps root URL /springmvc/ to about.jsp
+	@RequestMapping(value = { "/", "" })
+	public String aboutNew() {
+		return "welcome"; // This returns the view name "about.jsp"
+	}
+	
+	@RequestMapping("/about25")
+	public String about25() {
+		return "about";
+	}
+	
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
+
+	@RequestMapping("/home1")
+	public String home() {
+		return "home";
+	}
+	
 	@RequestMapping("/index")
 	public String index(Model model) {
-
 		model.addAttribute("name", "Ashish");
 		model.addAttribute("id", 444);
 
 		List<String> friends = new ArrayList<String>();
+		
 		friends.add("Aman");
 		friends.add("Ashish");
 		friends.add("Ashish Ranjan");
@@ -29,18 +50,6 @@ public class HomeController1 {
 
 		System.out.println("Index Java File");
 		return "index";
-	}
-
-	@RequestMapping("/about")
-	public String about() {
-		System.out.println("About Java File");
-		return "about";
-	}
-
-	@RequestMapping("/home")
-	public String home() {
-		System.out.println("Home Java File ");
-		return "home";
 	}
 
 	@RequestMapping("/help")
@@ -99,6 +108,8 @@ public class HomeController1 {
 	}
 
 }
+
+
 // When You Run the Server, You Will not get any Output
 // When you Enter localhost:8080/springmvc -> No Output  
 // <-- This is Home (Here No Result is Available)
