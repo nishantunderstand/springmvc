@@ -32,14 +32,19 @@ graph TD
         G --> G3
     end
 
+    I[/first/home]
+    J[/first/about]
+    K[/first/help]
+
     subgraph "URL Patterns"
-        I[/first/home]
-        J[/first/about]
-        K[/first/help]
-        A --> I
-        A --> J
-        A --> K
+        I
+        J
+        K
     end
+
+    A --> I
+    A --> J
+    A --> K
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
@@ -48,4 +53,4 @@ graph TD
     style E fill:#bfb,stroke:#333,stroke-width:2px
     style F fill:#bfb,stroke:#333,stroke-width:2px
     style G fill:#bfb,stroke:#333,stroke-width:2px
-    style H fill:#f9f,stroke:#333,stroke-width:2px 
+    style H fill:#f9f,stroke:#333,stroke-width:2px
