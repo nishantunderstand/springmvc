@@ -1,4 +1,16 @@
-Generic Spring MVC Project Structure
+- Wednesday, June 4, 2025 5:30:25 PM
+I am finally really happy.
+Starting the Spring Web MVC is always a Challenge.
+There is always some tiny mistake
+Easier thing gets really complicated.
+Finally I am happy to solved it.
+
+
+
+
+# Generic Spring MVC Project Structure
+
+
 ```md
 
 spring-mvc-project/

@@ -12,6 +12,11 @@ import springmvc.model.User;
 public class ContactController
 {
 	
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
+	
 	
 	
 	@RequestMapping("/contact")
@@ -24,6 +29,8 @@ public class ContactController
 		*/
 		return "contact";
 	}
+	
+	
 	
 	/**
 	UseCase  Relative and Absolute  
