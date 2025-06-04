@@ -8,7 +8,7 @@
     <title>Home Page</title>
 </head>
 <body>
-	<h1> JSP 1x </h1>
+	<h1> JSP 1x Scriplet </h1>
 	
     <%
         String name = (String) request.getAttribute("name");

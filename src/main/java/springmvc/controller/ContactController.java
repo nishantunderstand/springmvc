@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Jun 4, 2025,10:03:26 PM
- * 1. Controller to UI
- * 2. Backend to Frontned 
- * 3. Spring 2.5 x Approach
+Jun 4, 2025,10:03:26 PM
+Controller to UI | Backend to Frontned 
+Spring 2.5 x Approach
+	Model
+		ScripletTag
+		Expression Language
+		JSTL
+		Thymleaf
+	ModelAndView
  */
 @Controller
 public class ContactController {	
@@ -34,8 +39,8 @@ public class ContactController {
 
 		model.addAttribute("friendlist", friends);
 
-		return "jsp1x"; 		
-		//return "jsp2x";
+		//return "jsp1x"; 		
+		return "jsp2x";
 	}	
 	
 	
@@ -49,6 +54,7 @@ public class ContactController {
 	}
 	*/
 	
+	// Thymleaf Feature - That's why unable to Test it
 	@GetMapping("/home2025")
     public String home2025(Model model) {
         List<String> friends = Arrays.asList("Alice", "Bob", "Charlie");

@@ -8,7 +8,11 @@
     <title>Home Page</title>
 </head>
 <body>
-	<h1>JSP 2x </h1>
+	<h1>
+        JSP 2x 
+        EL (Expression Language) 
+        JSTL JSP Standard Tag Library
+    </h1>
     <h1>Name: ${name}</h1>
 
     <h2>Friend List:</h2>
