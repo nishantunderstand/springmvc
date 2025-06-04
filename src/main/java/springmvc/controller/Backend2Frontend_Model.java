@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 Jun 4, 2025,10:03:26 PM
 Controller to UI | Backend to Frontned 
 Spring 2.5 x Approach
-	Model
+	Model : Spring 2.5x
 		ScripletTag : Spring 1x
-		Expression Language : : Spring 2x
-		JSTL : : Spring 2x
- 		Thymleaf : : Spring 3.1
+		Expression Language : Spring 2x
+		JSTL : Spring 2x
+ 		Thymleaf : Spring 3.1
 	ModelAndView : Spring 2.5x
  */
 

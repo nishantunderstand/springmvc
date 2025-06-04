@@ -11,8 +11,7 @@ public class BasicController {
 	public String aboutNew() {
 		return "welcome"; // This returns the view name "about.jsp"
 	}
-	
-	
+		
 	@RequestMapping("/about")
 	public String about() {
 		return "about";
@@ -21,7 +20,6 @@ public class BasicController {
 	@RequestMapping("/home")
 	public String home() {
 		return "home";
-	}
-	
+	}	
 
 }
