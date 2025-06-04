@@ -1,4 +1,56 @@
-Saturday, May 31, 2025 7:21 PM
+Generic Spring MVC Project Structure
+```md
+
+spring-mvc-project/
+│
+├── 📁 src/
+│   ├── 📁 main/
+│   │   ├── 📁 java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── springmvc/
+│   │   │               ├── controller/
+│   │   │               │   └── HomeController.java
+│   │   │               ├── model/
+│   │   │               │   └── User.java
+│   │   │               ├── service/
+│   │   │               │   └── UserService.java
+│   │   │               ├── dao/
+│   │   │               │   └── UserDao.java
+│   │   │               └── config/
+│   │   │                   └── WebConfig.java
+│   │   │
+│   │   ├── 📁 resources/
+│   │   │   └── application.properties
+│   │   │   └── messages.properties
+│   │   │
+│   │   └── 📁 webapp/
+│   │       ├── 📁 WEB-INF/
+│   │       │   ├── web.xml
+│   │       │   └── views/
+│   │       │       └── home.jsp
+│   │       └── index.jsp
+│
+├── 📁 src/test/java/
+│   └── com/example/springmvc/
+│       └── controller/
+│           └── HomeControllerTest.java
+│
+├── 📄 pom.xml
+└── 📄 README.md
+
+```
+
+
+
+
+
+
+
+
+
+
+- Saturday, May 31, 2025 7:21 PM
 New Day, New Era, New Chapter
 Welcome to 2025
 Future Me
@@ -6,7 +58,8 @@ Are you ready to learn ??
 
 
 ---
-Tuesday, May 21, 2024 10:51 AM
+
+- Tuesday, May 21, 2024 10:51 AM
 I am hoping to understand it better, So that i can perform.
 Turn's out, I am really poor at it.
 Let see what i will become after Pratice.
