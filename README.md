@@ -6,8 +6,6 @@ Easier thing gets really complicated.
 Finally I am happy to solved it.
 
 
-
-
 # Generic Spring MVC Project Structure
 
 

@@ -8,6 +8,7 @@ sequenceDiagram
     participant View
     participant JSP
 
+
     Client->>web.xml: HTTP Request (/first/home)
     web.xml->>DispatcherServlet: Route Request
     DispatcherServlet->>spring-servlet.xml: Load Configuration
