@@ -1,5 +1,6 @@
 # How to deploy App ?
 - You need war file
+
 - You need to build.
   - Update the pom.
     ```
@@ -20,7 +21,7 @@
 - copy the war from Project to that location.
   - paste & refresh it
   - It will automatically unzipped.
-- mvn command 
+## mvn command 
 - You need install maven in your laptop
   - mvn compile
   - mvn package
@@ -39,6 +40,9 @@
 <user username="root" password="root" roles="manager-gui,manager-script"/>
 
 - What are the different roles ??
+
+
+
 
 === Automate with Jenkins ====
 - https://www.jenkins.io/download/
