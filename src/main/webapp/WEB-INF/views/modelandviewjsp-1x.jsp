@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Model And View - Scriptlet Version</title>
+    <title>Model And View - scriptlet Version</title>
 </head>
 <body>
 
@@ -20,18 +20,21 @@
         List<Integer> marks = (List<Integer>) request.getAttribute("marks");
     %>
 
-    <h1>MODEL-AND-VIEW using Scriptlet</h1>
+    <h1>MODEL-AND-VIEW using scriptlet</h1>
 
     <h2>Name: <%= name %></h2>
     <h2>Roll Number: <%= rollNumber %></h2>
     <h2>Time: <%= time %></h2>
 
     <h3>Marks List:</h3>
+    <c:if test="${not empty marks}">
     <ul>
-        <% for (Integer mark : marks) { %>
-            <li><%= mark %></li>
-        <% } %>
+        <c:forEach var="mark" items="${marks}">
+            <li>${mark}</li>
+        </c:forEach>
     </ul>
+</c:if>
+
 
 </body>
 </html>

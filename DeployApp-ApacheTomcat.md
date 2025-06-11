@@ -21,12 +21,19 @@
 - copy the war from Project to that location.
   - paste & refresh it
   - It will automatically unzipped.
+
 ## mvn command 
 - You need install maven in your laptop
   - mvn compile
   - mvn package
   - mvn install
   - mvn clean
+
+## Eclipse Version
+Run as Maven clean install
+
+War file be created in target
+
 
 ---
 
@@ -40,11 +47,28 @@
 <user username="root" password="root" roles="manager-gui,manager-script"/>
 
 - What are the different roles ??
+ 
+--------------------------------
+
+# Apache Tomcat 
+- Navigate to this Folder 
+D:\Spring_2025\Apache Tomcat\apache-tomcat-9.0.105\bin
+- Run startup.bat
+
+Check port no:
+Default 8080
+Else Changed to 8081
+
+copy the war from eclipse and paste to 
+D:\Spring_2025\Apache Tomcat\apache-tomcat-9.0.105\webapps
+Just paste it
+It will automatically get unzipped
 
 
 
+-------------------------
+Automate with Jenkins
 
-=== Automate with Jenkins ====
 - https://www.jenkins.io/download/
 - Download war file 
 - Locate initial admin Password (Initial Password)

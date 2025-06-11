@@ -1,0 +1,21 @@
+package springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController2022 {
+
+	@RequestMapping("/home")
+	public String home() {
+		System.out.println("this is Home Java File ");
+		return "index";
+	}
+
+}
+
+/**
+ * 
+ * How this works: localhost:8081/projectname/urlpattern
+ * localhost:8081/springmvc/home --> Then it will Open homeController
+ */
