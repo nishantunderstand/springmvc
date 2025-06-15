@@ -1,5 +1,9 @@
 package springmvc.model;
 
+/**
+ * Jun 15, 2025,10:56:29 AM
+ * Model Class / Entity Class / Data Class
+ */
 public class User {
 	private String email;
 	private String userName;
