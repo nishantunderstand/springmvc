@@ -3,7 +3,6 @@ package springmvc.controller;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,7 +52,6 @@ public class Backend2Frontend_Model {
 		model.addAttribute("friendlist", friends); 		
 		return "model-jsp2x";
 	}
-	
 	
 	
 	/**

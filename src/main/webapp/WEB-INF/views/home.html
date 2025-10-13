@@ -5,13 +5,10 @@
     <title>Home Page</title>
 </head>
 <body>
-
     <h1>Name: <span th:text="${name}"></span></h1>
-
     <h2>Friend List:</h2>
     <ul>
         <li th:each="friend : ${friendlist}" th:text="${friend}"></li>
     </ul>
-
 </body>
 </html>
