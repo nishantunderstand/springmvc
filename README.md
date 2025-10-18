@@ -1,3 +1,13 @@
+# How to deploy 
+
+mvn tomcat7:run
+Can at runtime deploy at different port ??
+
+
+
+
+
+
 # Saturday, October 18, 2025 11:19:56 AM
 
 - I am restarting everything, Let see what happen in the future.
@@ -64,6 +74,7 @@ spring-mvc-project/
 │   │       ├── 📁 WEB-INF/
 │   │       │   ├── web.xml
 │   │       │   └── views/
+
 │   │       │       └── home.jsp
 │   │       └── index.jsp
 │
