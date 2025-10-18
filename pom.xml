@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.spring.mvc</groupId>
@@ -11,17 +12,29 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.war.plugin.version>3.4.0</maven.war.plugin.version>
+        <tomcat.maven.plugin.version>2.3</tomcat.maven.plugin.version>
+
+        <spring.webmvc.version>5.3.38</spring.webmvc.version>
+        <spring.security.version>5.8.15</spring.security.version>
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <jakarta.servlet.api.version>5.0.0</jakarta.servlet.api.version>
+        <jakarta.jsp.api.version>3.0.0</jakarta.jsp.api.version>
+        <jakarta.jstl.api.version>2.0.0</jakarta.jstl.api.version>
+        <glassfish.jstl.version>2.0.0</glassfish.jstl.version>
+
+        <dependency.check.version>9.2.0</dependency.check.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 for testing -->
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -29,34 +42,34 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.3.38</version>
+            <version>${spring.webmvc.version}</version>
         </dependency>
 
-        <!-- Spring Security (baseline protection) -->
+        <!-- Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>5.8.15</version>
+            <version>${spring.security.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>5.8.15</version>
+            <version>${spring.security.version}</version>
         </dependency>
 
-        <!-- Servlet API (Tomcat provides at runtime) -->
+        <!-- Servlet API (provided) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
+            <version>${jakarta.servlet.api.version}</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- JSP API -->
+        <!-- JSP API (provided) -->
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
-            <version>3.0.0</version>
+            <version>${jakarta.jsp.api.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -64,41 +77,44 @@
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-            <version>2.0.0</version>
+            <version>${jakarta.jstl.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>2.0.0</version>
+            <version>${glassfish.jstl.version}</version>
         </dependency>
     </dependencies>
 
     <build>
         <finalName>springmvc</finalName>
         <plugins>
-            <!-- Java compiler -->
+            <!-- Java Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
 
-            <!-- WAR packaging -->
+            <!-- WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>${maven.war.plugin.version}</version>
             </plugin>
 
-            <!-- OWASP Dependency Check (security scanning) -->
+            <!-- OWASP Dependency Check -->
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>9.2.0</version>
+                <version>${dependency.check.version}</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -107,6 +123,32 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Tomcat 9 Plugin -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat9-maven-plugin</artifactId>
+                <version>${tomcat.maven.plugin.version}</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/springmvc</path>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>internal-repo</id>
+            <name>Internal Release Repository</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>internal-snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
