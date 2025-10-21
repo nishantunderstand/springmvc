@@ -14,7 +14,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
+		<servlet-name>spring</servlet-name> <!-- Same as spring-servlet.xml -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 </web-app>

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-// @RequestMapping("/v1") 
+@RequestMapping("/v1") 
 // Best Pratice to Add Versioning
 public class BasicController {
 
