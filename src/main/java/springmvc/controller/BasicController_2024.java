@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/v1") 
 // Best Pratice to Add Versioning
-public class BasicController {
+public class BasicController_2024 {
 
   // Maps root URL /springmvc/ to about.jsp
   @RequestMapping(value = {"/", ""}) // This is Handling Root, And Empty
