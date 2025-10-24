@@ -1,3 +1,16 @@
+mvn dependency:purge-local-repository;mvn clean package; mvn tomcat7:run;
+
+If you face issue, Try 
+mvn tomcat7:run
+
+
+
+
+
+
+
+
+
 # How to deploy 
 
 mvn tomcat7:run
