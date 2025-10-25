@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    environment {
+        MAVEN_HOME = "C:\\Program Files\\Apache\\apache-maven-3.9.6"  // Updated Maven path
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17.0.2"               // Updated Java path
+        PATH = "${JAVA_HOME}\\bin;${MAVEN_HOME}\\bin;${env.PATH}"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/nishantunderstand/springmvc.git' // Replace with your repo
+            }
+        }
+
+        stage('Build & Package') {
+            steps {
+                bat "mvn clean package"  // Compiles and packages your WAR
+            }
+        }
+
+        stage('Stop Previous Jetty') {
+            steps {
+                // Stop any previous Jetty instance (if running)
+                bat "taskkill /F /IM java.exe || echo No previous instance running"
+            }
+        }
+
+        stage('Run Jetty') {
+            steps {
+                // Start Jetty in the background
+                bat "start cmd /c mvn jetty:run"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "Build & Jetty server started successfully!"
+        }
+        failure {
+            echo "Build or Jetty startup failed!"
+        }
+    }
+}

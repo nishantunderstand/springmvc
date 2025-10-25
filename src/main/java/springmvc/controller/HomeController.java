@@ -3,12 +3,10 @@ package springmvc.controller;
 import java.util.Map;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+//@Controller
+@RestController
 @RequestMapping("/v2")
 public class HomeController {
 
@@ -30,7 +28,7 @@ public class HomeController {
    */
   
   
-  // If You dont mention RequestMapping, Then Nothing will be Invoked.
+  // If You don't mention RequestMapping, Then Nothing will be Invoked.
   @ResponseBody
   @RequestMapping("/")
   @ResponseStatus(HttpStatus.CREATED)
@@ -53,17 +51,30 @@ public class HomeController {
   }
   
   @ResponseBody
-  @GetMapping(value = "/number1")
+  @GetMapping(value = "/number1", produces = "text/plain")
   public int number1() {
     return 44;
   }
-  
   // If you want to return number, Then you need to change Spring will return Content-Type: text/plain.
-  
-  @GetMapping("/number2")
+
+  @ResponseBody
+  @GetMapping(value = "/number2")
+  public Integer number2() {
+    return 44;
+  }
+  @GetMapping("/number2a")
   @ResponseBody
   public Map<String,Integer> numberMap(){
     return Map.of("number",33);
   }
+
+
+  @ResponseBody
+  @GetMapping(value = "/number3", produces = "application/json")
+  public Integer number3() {
+    return 44;
+  }
   
+
+
 }
