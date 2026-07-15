@@ -29,6 +29,10 @@ Will i Pass or fail.
 
 
 
+---
+sdk list java | grep -i installed
+sdk install java 17.0.13-tem
+
 
 
 
