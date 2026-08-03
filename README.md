@@ -4,36 +4,25 @@ If you face issue, Try
 mvn tomcat7:run
 
 
-
-
-
-
-
-
-
 # How to deploy 
 
 mvn tomcat7:run
 mvn tomcat9:run
 Can at runtime deploy at different port ??
 
-
-
-
-
-
 # Saturday, October 18, 2025 11:19:56 AM
 
 - I am restarting everything, Let see what happen in the future.
 Will i Pass or fail.
-
-
 
 ---
 sdk list java | grep -i installed
 sdk install java 17.0.13-tem
 
 
+# Tuesday, August 4, 2026 12:48:20 AM
+
+Resuming after a long time
 
 
 
